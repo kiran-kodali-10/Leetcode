@@ -1,0 +1,29 @@
+# Node.js / TypeScript
+node_modules/
+dist/
+*.js
+*.js.map
+
+# Visual Studio Code
+.vscode/
+.settings/
+
+# Dependency directories
+/yarn-error.log
+.pnp/
+.pnp.js
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor-specific files
+*.idea/
+*.iml
+*.log
+*.logs
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
