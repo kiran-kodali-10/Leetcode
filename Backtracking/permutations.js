@@ -25,3 +25,29 @@ var permute = function (nums) {
 
     return res;
 };
+
+// Using iteration
+function permute(nums) {
+    const res = [];
+    const stack = [[[], nums]];
+
+    while (stack.length > 0) {
+        const [currPerm, remainingNums] = stack.pop();
+
+        if (remainingNums.length === 0) {
+            res.push(currPerm);
+        } else {
+            for (let i = 0; i < remainingNums.length; i++) {
+                const newPerm = currPerm.concat(remainingNums[i]);
+                const newRemaining = remainingNums.slice(0, i).concat(remainingNums.slice(i + 1));
+                stack.push([newPerm, newRemaining]);
+            }
+        }
+    }
+
+    return res;
+}
+
+const input = [1, 2, 3]; // Replace with your input list
+const result = permute(input);
+console.log(result);
